@@ -1,0 +1,48 @@
+<%- include('../parts/head', {bot, user, path}) %>
+
+<title>BotCity Reglas | Discord Bot List</title>
+<style>
+strong {
+color: var(--body-text)!important;
+}
+</style>
+<div class="container px-3 mt-2 pt-5">
+    <div class="container px-3 content is-widescreen pt-5">
+        <div class="bg-vote-disbots pt-5">
+            <p class="is-size-4" style="text-decoration: underline;">Reglas de BotCity List</p>
+            <p style="text-align: none;"class="text-muted">
+&raquo <strong>1.</strong> Las condiciones para agregar bots son las siguientes;<br>
+  &nbsp;&nbsp;<strong>a)</strong> Tienes que elegir un tag.<br>
+  &nbsp;&nbsp;<strong>b)</strong> Tienes que ingresar la ID del bot correctamente.<br>
+  &nbsp;&nbsp;<strong>c)</strong> La fecha de creación de su bot debe ser 5 días antes de que se agregue.<br>
+  &nbsp;&nbsp;<strong>d)</strong> Tu bot no debe ser un duplicado de otros bots.<br>
+  &nbsp;&nbsp;<strong>e)</strong> El avatar de su bot no debe pertenecer a otro bot.(no debe ser igual)<br><br>
+&raquo <strong>2.</strong> Contenido de la página del bot que no está permitido;<br>
+  &nbsp;&nbsp;<strong>a)</strong> No debe redirigir a ningún sitio no relacionado.<br>
+  &nbsp;&nbsp;<strong>b)</strong> No debe poner otro sitio de lista de bots como iframe.<br>
+  &nbsp;&nbsp;<strong>c)</strong> No debe publicar imágenes que contengan desnudez.<br>
+  &nbsp;&nbsp;<strong>d)</strong> Debe proporcionar información detallada sobre su bot.<br>
+  &nbsp;&nbsp;<strong>e)</strong> Si bien brinda información detallada sobre su bot, debe usarla en las imágenes.<br>
+  &nbsp;&nbsp;<strong>f)</strong> Debes escribir el prefix correcto.<br>
+  &nbsp;&nbsp;<strong>g)</strong> Tienes que poner el sitio de tu bot como un iframe o escribir los comandos de tu bot.(Si no tiene página web no pasa nada)<br><br>
+&raquo <strong>3.</strong> No permitido en comandos de bot;<br>
+  &nbsp;&nbsp;<strong>a)</strong> No debe haber emojis en ninguno de los comandos de su bot que causen una crisis de epilepsia.<br>
+  &nbsp;&nbsp;<strong>b)</strong> Su bot debe haberse creado hace al menos 5 días.<br>
+  &nbsp;&nbsp;<strong>c)</strong> Tu bot debe ser único.
+<br><br>
+&raquo Comandos prohibidos;<br>
+  <strong>1.</strong> Dar/Obtener rol para todos<br>
+  <strong>2.</strong> Raidear el servidor<br>
+  <strong>3.</strong>  Anuncio de DM<br>
+  <strong>4.</strong> Mensaje de spam<br>
+  <strong>5.</strong> Envíar un mensaje por privado
+                </p>
+            <br>
+        </div>
+    </div>
+    <center>
+    <button onclick="location.href='/addbot'" class="btn btn-disbots"><i class="fad fa-check"></i>&nbsp;Aplica tu bot</button>
+    </center>
+</div>
+
+<%- include('../parts/foot') %>

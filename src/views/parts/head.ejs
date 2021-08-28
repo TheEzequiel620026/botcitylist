@@ -1,0 +1,207 @@
+<%- include('./meta.ejs') %>
+<head>
+<script>
+    document.onmousedown=disableclick;
+status="Stop trying to steal code";
+function disableclick(event)
+{
+  if(event.button==2)
+   {
+     alert(status);
+     return false;    
+   }
+}
+    document.onkeydown = function (e) {
+        status="Stop trying to steal code";
+        if (event.keyCode == 123) {
+            return false;
+        }
+        if (e.ctrlKey && e.shiftKey && (e.keyCode == 'I'.charCodeAt(0) || e.keyCode == 'i'.charCodeAt(0))) {
+            alert(status);
+            return false;
+        }
+        if (e.ctrlKey && e.shiftKey && (e.keyCode == 'C'.charCodeAt(0) || e.keyCode == 'c'.charCodeAt(0))) {
+            alert(status);
+            return false;
+        }
+        if (e.ctrlKey && e.shiftKey && (e.keyCode == 'J'.charCodeAt(0) || e.keyCode == 'j'.charCodeAt(0))) {
+            alert(status);
+            return false;
+        }
+        if (e.ctrlKey && (e.keyCode == 'U'.charCodeAt(0) || e.keyCode == 'u'.charCodeAt(0))) {
+            alert(status);
+            return false;
+        }
+        if (e.ctrlKey && (e.keyCode == 'S'.charCodeAt(0) || e.keyCode == 's'.charCodeAt(0))) {
+            alert(status);
+            return false;
+        }
+        
+    }
+</script>
+</head>
+<style>
+.bg-indigo-600 {
+    --tw-bg-opacity: 1;
+    background: linear-gradient(-45deg, #ee7752, rgba(79,70,229, 1), #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+</style>
+<meta name='dmca-site-verification' content='OEcrVEErMzk3S0ZvMk9Wa3V1d0xidz090' />
+<% if(user) {%>
+<% } else { %>
+<div class="bg-indigo-600">
+  <div class="max-w-7xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
+    <div class="is-flex is-align-items-center justify-content-between is-flex-wrap">
+      <div class="w-0 is-flex-grow-1" style="align-items: center">
+        <span class="is-flex p-2 rounded-lg bg-indigo-600" style="opacity: 0%!important">
+         
+        </span>
+        <p class="ml-3 font-medium text-white truncate">
+          <span>
+            &nbsp; First Bot to get 100 votes will get boosted!
+            </span>
+        </p>
+      </div>
+      <div class="is-flex justify-content-end">
+        <a href="/dc" class="btn btn-disbots">
+          Join Our Discord
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<% } %>
+    <nav class="navbar navbar-expand-lg navbar-dark p-2 pl-4 pr-4 bg-disbots z">
+        <div class="container">
+        <a title="Disbots" class="navbar-brand logoholder"><img id="logoimg" style="height:55px; width:55px;" src="../../img/logo.png" alt="Disbots"/></a>
+        <div class="sidebar-brand-text mx-3" style="text-shadow: 2px 2px 5px black;">Botcitylist <sup>xyz</sup></div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation" style="border: none">
+          <span class="fad fa-bars fa-2x"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarColor02">
+          <ul class="navbar-nav mainlink mr-auto">
+            <% if(!req.originalUrl.includes('/server')) { %>
+            <li class="nav-item">
+              <a title="Disbots" class="nav-link nvhome" href="/"><i class="fad fa-home mr-1"></i> Principal</a>
+            </li>
+            <li class="nav-item">
+              <a title="Disbots" class="nav-link" href="/bots"><i class="fad fa-robot mr-1"></i> Bots</a>
+            </li>
+
+            <% if(user) {%>
+            <li class="nav-item">
+                <a title="Disbots" class="nav-link" href="/addbot"><i class="fad fa-plus mr-1"></i> Add Bot</a>
+            </li>
+            <% } %>
+            <li class="nav-item">
+                <a title="Disbots" class="nav-link" href="/servers"><i class="fad fa-server mr-1"></i>Servers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/news"><i class="fad fa-newspaper mr-1"></i>Nuevos</a>
+            </li>
+            <% } else { %>
+            <li class="nav-item">
+              <a title="Disbots" class="nav-link nvhome" href="/servers"><i class="fad fa-home mr-1"></i> Principal</a>
+            </li>
+            <li class="nav-item">
+                <a title="Disbots" class="nav-link" href="/servers/tags"><i class="fad fa-tags mr-1"></i> Tags</a>
+            </li>
+            <li class="nav-item">
+                <a title="Disbots" class="nav-link" href="/"><i class="fad fa-robot mr-1"></i> Bots</a>
+            </li>
+            <li class="nav-item">
+                <a title="Disbots" class="nav-link" href="/dsl"><i class="fad fa-robot mr-1"></i> Invite Bot BotCity List</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/news"><i class="fad fa-newspaper mr-1"></i>Nuevos</a>
+            </li>
+            <% if(user) {%>
+            <li class="nav-item"> 
+                <a title="Disbots" class="nav-link" href="/server/add"><i class="fad fa-plus mr-1"></i> Add Server</a>
+            </li>
+            <% } %>
+            <% } %>
+        <li class="nav-item dropdown" style="font-family: Arial, FontAwesome; z-index: 999999999; width: 100px;">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fad fa-ellipsis-h"></i>&nbsp;Más
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" onclick="location.href='/partners'"><i class="fad fa-handshake"></i>&nbsp;Partners</a>
+            <a class="dropdown-item" onclick="location.href='/team'"><i class="fad fa-users mr-1"></i>&nbsp;Team</a>
+            <a class="dropdown-item" onclick="location.href='/rewards'"><i class="fad fa-coin mr-1"></i>&nbsp;Premios</a>
+            <a class="dropdown-item" onclick="location.href='/promotion'"><i class="fad fa-stars"></i> Promociones</a>
+            <a class="dropdown-item" onclick="location.href='certification'"><i class="fad fa-badge-check"></i>&nbsp;Certificación</a>
+            <a class="dropdown-item" onclick="location.href='/status'"><i class="fad fa-chart-bar mr-1"></i>&nbsp;Status</a>
+            <a class="dropdown-item" onclick="location.href='/codes/categories'"><i class="fad fa-code"></i>&nbsp;Codes compartidos</a>
+            <a class="dropdown-item"  onclick="location.href='/uptime/links'"><i class="fad fa-sync-alt"></i>&nbsp;Uptime</a>
+            <a class="dropdown-item"  onclick="location.href='/bugreport'"><i class="fal fa-bug"></i>&nbsp;Reportar bug</a>
+            <% if(user) { %>
+                <% 
+                let guild = bot.guilds.cache.get(config.server.id).members.cache.get(user.id);
+                if(guild) {
+                if(guild.roles.cache.get(roles.administrator) || guild.roles.cache.get(roles.moderator)) {
+                %>
+                    <a title="Disbots" class="dropdown-item" href="/admin"><i class="fad fa-magic mr-1"></i> Admin Panel | Dashboard</a>
+
+                <% }} %>
+            <% } %>
+            </div>
+        </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <% 
+            let languages = global.config.website.languages;
+            %>            
+            &nbsp;
+            <li class="nav-item dropdown">
+                  <a class="btn btn-disbots dropdown-toggle" href="#" id="navbarDropdown" translate="no" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fad fa-globe"></i>&nbsp;Idioma
+                  </a>
+                <div class="dropdown-menu dropdown-menu-right" style="max-width:220px!important;">
+            <% languages.map(x => { %>
+                <a href="#" translate="no" onclick="doGTranslate('en|<%= x.code %>')" title="Disbots" class="dropdown-item">
+                <img src="https://www.countryflags.io/<%= x.flag %>/flat/32.png">
+                    &nbsp;<%= x.name %>
+                </a>
+                <% }) %>
+                </div>
+              </li>
+
+
+                                      &nbsp;
+                          <% if(user) {%>
+            <li class="nav-item">
+                <a title="logout after signing in" class="btn btn-disbots" href="/logout"><i class="fal fa-sign-out mr-2"></i> Cerrar sesión</a>
+            </li>
+          &nbsp;
+              <li class="nav-item dropdown">
+                  <a class="btn btn-disbots" onclick='location.href = "/user/<%= user.id %>"' translate="no">
+                  <img width="24" style="border-radius: 50%" src='https://cdn.discordapp.com/avatars/<%= user.id %>/<%= user.avatar %>.png'>
+                    <%=user.username%><small>#<%=user.discriminator%></small>
+                  </a>
+              </li>
+            <% } else { %>
+            <li class="nav-item">
+                <a title="Disbots" class="btn btn-disbots" href="/uneed2login"><i class="fad fa-sign-in mr-1"></i> Iniciar sesión</a>
+            </li>
+	    <% } %>
+          </ul>
+        </div>
+        </div>
+
+      </nav>

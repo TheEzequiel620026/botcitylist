@@ -1,0 +1,38 @@
+<%- include('../../parts/head', {bot, user, path}) %>
+<title>Certificación | Discord Bot List</title>
+<div class="container px-3 mt-2 pt-5">
+    <div class="container px-3 content is-widescreen pt-5">
+        <div class="bg-vote-disbots pt-5">
+            <h3 class="has-text-white is-size-3" style="margin-bottom: 10px;"> </h3>
+            <p>&raquo&raquo Requisitos para el certificado</p>
+            <p>
+                &raquo Su bot debe haber estado en nuestra botlist durante al menos 5 días.
+                <br>&raquo Debe estar alojado 24/7. Solo se aceptan tiempos de inactividad breves para realizar un mantenimiento menor o corregir errores.
+                <br>&raquo Debe tener un sitio que proporcione documentación muy clara sobre las características del bot.
+                <br>&raquo Debe tener más de 100 servidores.
+                </p>
+            <br>
+            <p>&raquo&raquo Beneficios del certificado</p>
+            <p>
+                <br>&raquo&raquo Para bots
+                <br>&raquo Un rol especial en nuestro servidor Discord para que la gente sepa que está certificado.
+                <br>&raquo Una insignia especial(                <span data-tooltip="<%=bot.guilds.cache.get(config.server.id).roles.cache.get(roles.botlist.certified_bot).name%>" data-tooltip-location="top"> 
+                    <i class="fad fa-badge-check bodyIcon" style="font-size: 20px;"></i>
+                    </span>) en su tarjeta de bot para que la gente sepa que está certificado.
+                
+                <br><br>&raquo&raquo Para desarrolladores de bots
+                
+                <br>&raquo Un rol especial en nuestro servidor de Discord para que la gente sepa que está certificado.
+                <br>&raquo Una insignia especial(                <span data-tooltip="<%=bot.guilds.cache.get(config.server.id).roles.cache.get(roles.botlist.certified_developer).name%>" data-tooltip-location="top"> 
+                    <i class="fad fa-badge-check" style="color: <%=bot.guilds.cache.get(config.server.id).roles.cache.get(roles.botlist.certified_developer).hexColor%>;font-size: 20px;"></i>
+                    </span>) en su perfil para que la gente sepa que está certificado.
+                </p>
+            <br>
+        </div>
+    </div>
+    <center>
+    <button onclick="location.href='/certification/apply'" class="btn btn-disbots"><i class="fad fa-check"></i>&nbsp;Aplica tu bot</button>
+    </center>
+</div>
+
+<%- include('../../parts/foot') %>
